@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prathmesh Nalawade Resume</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ffffff, #f8f8f8, #e8e8e8);
+            background-attachment: fixed;
+            padding:40px 20px;
+            min-height:100vh;
+            color: #800020;
+        }
+
+        .resume-container{
+            max-width:1200px;
+            margin:auto;
+            background: linear-gradient(145deg, #ffffff, #fefefe);
+            border-radius:30px;
+            overflow:hidden;
+            box-shadow:0 25px 70px rgba(128,0,32,0.15);
+            display:flex;
+            animation: slideIn 1s ease-out;
+            border: 3px solid #800020;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(50px) scale(0.95); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        /* LEFT PANEL */
+
+        .left-panel{
+            width:35%;
+            background: linear-gradient(180deg, #800020, #a52a2a, #b22222);
+            color:#ffffff;
+            padding:50px 35px;
+            text-align:center;
+            position:relative;
+        }
+
+        .left-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.5;
+        }
+
+        .profile{
+            width:180px;
+            height:180px;
+            border-radius:50%;
+            border:6px solid #ffffff;
+            margin-bottom:25px;
+            object-fit:cover;
+            box-shadow:0 15px 35px rgba(255,255,255,0.4);
+            transition:0.4s;
+            position:relative;
+        }
+
+        .profile:hover {
+            transform: scale(1.08) rotate(5deg);
+            box-shadow:0 20px 45px rgba(255,255,255,0.6);
+        }
+
+        .left-panel h1{
+            font-size:38px;
+            margin-bottom:12px;
+            font-weight:700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .designation{
+            font-size:18px;
+            opacity:0.9;
+            margin-bottom:35px;
+            font-weight:300;
+            color: #ffffff;
+        }
+
+        .section{
+            margin-top:40px;
+            text-align:left;
+            position:relative;
+        }
+
+        .section h2{
+            font-size:24px;
+            margin-bottom:15px;
+            border-bottom:3px solid #ffffff;
+            padding-bottom:8px;
+            font-weight:600;
+            color: #ffffff;
+        }
+
+        .section p,
+        .section li{
+            font-size:16px;
+            line-height:2;
+            opacity:0.95;
+            color: #ffffff;
+        }
+
+        .section ul{
+            padding-left:20px;
+        }
+
+        .section li::marker {
+            color: #ffffff;
+        }
+
+        /* RIGHT PANEL */
+
+        .right-panel{
+            width:65%;
+            padding:60px;
+            background: linear-gradient(145deg, #fefefe, #ffffff);
+        }
+
+        .right-section{
+            margin-bottom:45px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .right-section h2{
+            color:#800020;
+            font-size:30px;
+            margin-bottom:18px;
+            position:relative;
+            padding-left:25px;
+            font-weight:700;
+        }
+
+        .right-section h2::before{
+            content:'';
+            position:absolute;
+            left:0;
+            top:8px;
+            width:10px;
+            height:35px;
+            background: linear-gradient(135deg, #800020, #ffffff);
+            border-radius:12px;
+        }
+
+        .right-section p,
+        .right-section li{
+            font-size:17px;
+            line-height:1.9;
+            color:#2c3e50;
+        }
+
+        .right-section ul{
+            padding-left:25px;
+        }
+
+        .card{
+            background: linear-gradient(145deg, #ffffff, #f8f8f8);
+            padding:25px;
+            border-radius:20px;
+            margin-bottom:20px;
+            box-shadow:0 10px 30px rgba(128,0,32,0.1);
+            border-left:8px solid #800020;
+            transition:0.4s;
+            position:relative;
+            overflow:hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, rgba(128,0,32,0.08), transparent);
+            border-radius: 50%;
+            transform: translate(50%, -50%);
+        }
+
+        .card:hover{
+            transform:translateY(-10px) rotate(1deg);
+            box-shadow:0 20px 50px rgba(128,0,32,0.2);
+        }
+
+        .card h3{
+            color:#800020;
+            margin-bottom:10px;
+            font-size:20px;
+            font-weight:600;
+        }
+
+        .nav-container{
+            max-width:1200px;
+            margin:30px auto 0;
+            display:flex;
+            justify-content:space-between;
+            animation: slideIn 1.2s ease-out;
+        }
+
+        .nav-btn{
+            text-decoration:none;
+            background: linear-gradient(135deg, #800020, #a52a2a);
+            color:#ffffff;
+            padding:14px 30px;
+            border-radius:15px;
+            font-weight:600;
+            font-size:16px;
+            transition:0.3s;
+            box-shadow:0 6px 20px rgba(128,0,32,0.3);
+        }
+
+        .nav-btn:hover{
+            background: linear-gradient(135deg, #a52a2a, #b22222);
+            transform:scale(1.1);
+            box-shadow:0 8px 25px rgba(128,0,32,0.5);
+        }
+
+        @media(max-width:768px){
+
+            .resume-container{
+                flex-direction:column;
+            }
+
+            .left-panel,
+            .right-panel{
+                width:100%;
+            }
+
+            .right-panel{
+                padding:35px;
+            }
+
+            .left-panel{
+                padding:35px 25px;
+            }
+
+            .profile{
+                width:140px;
+                height:140px;
+            }
+
+            .left-panel h1{
+                font-size:28px;
+            }
+
+            .right-section h2{
+                font-size:24px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="resume-container">
+
+        <!-- LEFT PANEL -->
+
+        <div class="left-panel">
+
+            <img src="https://via.placeholder.com/150"
+                 alt="Profile Photo"
+                 class="profile">
+
+            <h1>Prathmesh Nalawade</h1>
+
+            <p class="designation">
+                Computer Engineering Student & Web Developer
+            </p>
+
+            <!-- CONTACT -->
+
+            <div class="section">
+
+                <h2>Contact</h2>
+
+                <p>📧 prathmeshchavan1224@gmail.com</p>
+                <p>📱 +91 9876543210</p>
+                <p>📍 Kolhapur, Maharashtra</p>
+
+            </div>
+
+            <!-- SKILLS -->
+
+            <div class="section">
+
+                <h2>Skills</h2>
+
+                <ul>
+                    <li>HTML, CSS & JavaScript</li>
+                    <li>C & C++ Programming</li>
+                    <li>Python Basics</li>
+                    <li>Frontend Web Development</li>
+                    <li>UI/UX Designing</li>
+                </ul>
+
+            </div>
+
+            <!-- LANGUAGES -->
+
+            <div class="section">
+
+                <h2>Languages</h2>
+
+                <ul>
+                    <li>English</li>
+                    <li>Hindi</li>
+                    <li>Marathi</li>
+                </ul>
+
+            </div>
+
+            <!-- HOBBIES -->
+
+            <div class="section">
+
+                <h2>Hobbies</h2>
+
+                <ul>
+                    <li>Gaming</li>
+                    <li>Photography</li>
+                    <li>Travelling</li>
+                    <li>Exploring Technology</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT PANEL -->
+
+        <div class="right-panel">
+
+            <!-- PROFILE -->
+
+            <div class="right-section">
+
+                <h2>Profile</h2>
+
+                <p>
+                    Passionate Computer Engineering student with strong interest
+                    in web development, UI designing, and modern technologies.
+                    Looking forward to enhancing technical skills and contributing
+                    to innovative projects.
+                </p>
+
+            </div>
+
+            <!-- EDUCATION -->
+
+            <div class="right-section">
+
+                <h2>Education</h2>
+
+                <div class="card">
+
+                    <h3>B.Tech in Computer Engineering</h3>
+
+                    <p>
+                        D. Y. Patil College of Engineering<br>
+                        2024 - 2028
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Higher Secondary Education</h3>
+
+                    <p>
+                        Kolhapur Junior College<br>
+                        2022 - 2024
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- PROJECTS -->
+
+            <div class="right-section">
+
+                <h2>Projects</h2>
+
+                <div class="card">
+
+                    <h3>Instagram Analytics Dashboard</h3>
+
+                    <p>
+                        Designed a dashboard to analyze Instagram performance,
+                        engagement, followers growth, and post statistics.
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>CampusIQ EdTech Platform</h3>
+
+                    <p>
+                        Developed an AI-powered educational platform for students
+                        with quizzes, notes, and smart learning features.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- ACHIEVEMENTS -->
+
+            <div class="right-section">
+
+                <h2>Achievements</h2>
+
+                <ul>
+                    <li>Participated in College Hackathons</li>
+                    <li>Completed Web Development Projects</li>
+                    <li>Created Responsive UI Designs</li>
+                </ul>
+
+            </div>
+
+            <!-- PERSONAL DETAILS -->
+
+            <div class="right-section">
+
+                <h2>Personal Details</h2>
+
+                <p><strong>Date of Birth:</strong> 11-09-2006</p>
+                <p><strong>Nationality:</strong> Indian</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- NAVIGATION BUTTONS -->
+
+    <div class="nav-container">
+
+        <a href="experiment9.html" class="nav-btn">
+            ⬅ Previous
+        </a>
+
+        <a href="assignment11/student.html" class="nav-btn">
+            Next ➜
+        </a>
+
+    </div>
+
+</body>
+</html>

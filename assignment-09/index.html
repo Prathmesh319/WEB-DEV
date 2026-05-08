@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 700px; margin: 40px auto; padding: 20px; }
+        fieldset { margin-bottom: 20px; padding: 15px; }
+        legend { font-weight: bold; }
+        label { display: block; margin: 10px 0 4px; font-weight: bold; }
+        input, select, textarea { width: 100%; padding: 8px; box-sizing: border-box; }
+        input[type="radio"], input[type="checkbox"] { width: auto; }
+        button { padding: 12px 24px; font-size: 16px; margin-top: 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+<h1>Employee Registration Form</h1>
+<form id="registrationForm" onsubmit="handleSubmit(event)">
+    <fieldset>
+        <legend>Personal Information</legend>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male" style="display:inline;">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female" style="display:inline;">Female</label>
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other" style="display:inline;">Other</label>
+    </fieldset>
+    <fieldset>
+        <legend>Contact Details</legend>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="3" required></textarea>
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+        <label for="state">State:</label>
+        <select id="state" name="state" required>
+            <option value="">-- Select --</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Gujarat">Gujarat</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>Professional Details</legend>
+        <label for="empId">Employee ID:</label>
+        <input type="text" id="empId" name="empId" required>
+        <label for="department">Department:</label>
+        <select id="department" name="department" required>
+            <option value="">-- Select --</option>
+            <option value="IT">IT</option>
+            <option value="HR">HR</option>
+            <option value="Finance">Finance</option>
+            <option value="Marketing">Marketing</option>
+        </select>
+        <label for="designation">Designation:</label>
+        <input type="text" id="designation" name="designation" required>
+        <label for="joinDate">Date of Joining:</label>
+        <input type="date" id="joinDate" name="joinDate" required>
+        <label for="salary">Salary:</label>
+        <input type="number" id="salary" name="salary" min="0" required>
+        <label>Skills:</label>
+        <input type="checkbox" id="html" name="skills" value="HTML">
+        <label for="html" style="display:inline;">HTML</label>
+        <input type="checkbox" id="css" name="skills" value="CSS">
+        <label for="css" style="display:inline;">CSS</label>
+        <input type="checkbox" id="js" name="skills" value="JavaScript">
+        <label for="js" style="display:inline;">JavaScript</label>
+        <label for="resume">Upload Resume:</label>
+        <input type="file" id="resume" name="resume" accept=".pdf,.doc">
+    </fieldset>
+    <button type="submit">Register</button>
+    <button type="reset">Reset</button>
+</form>
+<p id="formResponse" style="margin-top:15px; font-weight:bold; color:green;"></p>
+<script>
+function handleSubmit(e) {
+    e.preventDefault();
+    document.getElementById('formResponse').textContent = 'Employee registered successfully!';
+}
+</script>
+</body>
+</html>

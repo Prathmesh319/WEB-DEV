@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details Dashboard</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Poppins', sans-serif;
+            background:#f1f5f9;
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:30px;
+        }
+
+        /* MAIN CONTAINER */
+
+        .container{
+            width:100%;
+            max-width:1000px;
+            background:white;
+            border-radius:24px;
+            padding:35px;
+            box-shadow:0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        /* HEADER */
+
+        .header{
+            text-align:center;
+            margin-bottom:30px;
+        }
+
+        .header h1{
+            font-size:42px;
+            color:#1e293b;
+            margin-bottom:10px;
+        }
+
+        .header p{
+            color:#64748b;
+            font-size:16px;
+        }
+
+        /* TABLE */
+
+        .table-box{
+            overflow-x:auto;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            overflow:hidden;
+            border-radius:16px;
+            border:1px solid #e2e8f0;
+        }
+
+        th{
+            background:#2563eb;
+            color:white;
+            padding:16px;
+            font-size:16px;
+            text-transform:uppercase;
+        }
+
+        td{
+            padding:16px;
+            text-align:center;
+            font-size:15px;
+            color:#334155;
+            border-bottom:1px solid #e2e8f0;
+        }
+
+        tr:nth-child(even){
+            background:#f8fafc;
+        }
+
+        tr:hover{
+            background:#eff6ff;
+        }
+
+        /* BRANCH TAGS */
+
+        .branch{
+            display:inline-block;
+            padding:7px 14px;
+            border-radius:20px;
+            font-size:13px;
+            font-weight:600;
+        }
+
+        .ce{
+            background:#dbeafe;
+            color:#1d4ed8;
+        }
+
+        .it{
+            background:#dcfce7;
+            color:#15803d;
+        }
+
+        .ai{
+            background:#fef3c7;
+            color:#b45309;
+        }
+
+        /* BUTTONS */
+
+        .nav-container{
+            margin-top:30px;
+            display:flex;
+            justify-content:space-between;
+            gap:18px;
+        }
+
+        .nav-btn{
+            flex:1;
+            text-align:center;
+            text-decoration:none;
+            padding:14px;
+            border-radius:14px;
+            font-size:15px;
+            font-weight:600;
+            transition:0.3s;
+        }
+
+        .prev-btn{
+            background:#e2e8f0;
+            color:#1e293b;
+        }
+
+        .next-btn{
+            background:#2563eb;
+            color:white;
+        }
+
+        .nav-btn:hover{
+            transform:translateY(-2px);
+        }
+
+        .prev-btn:hover{
+            background:#cbd5e1;
+        }
+
+        .next-btn:hover{
+            background:#1d4ed8;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:768px){
+
+            .container{
+                padding:22px;
+            }
+
+            .header h1{
+                font-size:30px;
+            }
+
+            th, td{
+                padding:12px;
+                font-size:14px;
+            }
+
+            .nav-container{
+                flex-direction:column;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+
+        <div class="header">
+
+            <h1>Student Details</h1>
+
+            <p>
+                Simple and clean student information dashboard
+            </p>
+
+        </div>
+
+        <!-- TABLE -->
+
+        <div class="table-box">
+
+            <table>
+
+                <tr>
+                    <th>Name</th>
+                    <th>Roll No</th>
+                    <th>Branch</th>
+                </tr>
+
+                <tr>
+                    <td>Prathmesh Nalawade </td>
+                    <td>41</td>
+                    <td>
+                        <span class="branch ce">
+                            Computer Engineering
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Rohit Patil</td>
+                    <td>202</td>
+                    <td>
+                        <span class="branch it">
+                            Information Technology
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Sakshi Jadhav</td>
+                    <td>203</td>
+                    <td>
+                        <span class="branch ai">
+                            AI & DS
+                        </span>
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <!-- NAVIGATION -->
+
+        <div class="nav-container">
+
+            <a href="../assignment11/student.html"
+               class="nav-btn prev-btn">
+
+                ⬅ Previous Assignment
+
+            </a>
+
+            <a href="../assignment13/application_output.html"
+               class="nav-btn next-btn">
+
+                Next Assignment ➜
+
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

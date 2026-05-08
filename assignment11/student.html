@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student XML Portal</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Poppins', sans-serif;
+            background:#f1f5f9;
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:30px;
+        }
+
+        /* MAIN CONTAINER */
+
+        .container{
+            width:100%;
+            max-width:1100px;
+            background:white;
+            border-radius:24px;
+            overflow:hidden;
+            box-shadow:0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        /* HEADER */
+
+        .hero{
+            background:#2563eb;
+            color:white;
+            padding:45px;
+        }
+
+        .hero h1{
+            font-size:42px;
+            margin-bottom:12px;
+        }
+
+        .hero p{
+            font-size:17px;
+            line-height:1.7;
+            opacity:0.95;
+        }
+
+        /* CONTENT */
+
+        .content{
+            padding:35px;
+            background:#ffffff;
+        }
+
+        .card{
+            background:#f8fafc;
+            border-radius:18px;
+            padding:25px;
+            border:1px solid #e2e8f0;
+        }
+
+        .card-top{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:20px;
+        }
+
+        .card-top h2{
+            font-size:28px;
+            color:#1e293b;
+        }
+
+        .badge{
+            background:#22c55e;
+            color:white;
+            padding:8px 16px;
+            border-radius:20px;
+            font-size:14px;
+            font-weight:600;
+        }
+
+        /* IFRAME */
+
+        iframe{
+            width:100%;
+            height:500px;
+            border:none;
+            border-radius:14px;
+            background:white;
+            border:1px solid #dbeafe;
+        }
+
+        /* NAVIGATION */
+
+        .nav-container{
+            margin-top:30px;
+            display:flex;
+            justify-content:space-between;
+            gap:20px;
+        }
+
+        .nav-btn{
+            flex:1;
+            text-decoration:none;
+            text-align:center;
+            padding:15px;
+            border-radius:14px;
+            font-size:16px;
+            font-weight:600;
+            transition:0.3s;
+        }
+
+        .prev-btn{
+            background:#e2e8f0;
+            color:#1e293b;
+        }
+
+        .next-btn{
+            background:#2563eb;
+            color:white;
+        }
+
+        .nav-btn:hover{
+            transform:translateY(-3px);
+        }
+
+        .prev-btn:hover{
+            background:#cbd5e1;
+        }
+
+        .next-btn:hover{
+            background:#1d4ed8;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:768px){
+
+            .hero{
+                padding:30px;
+            }
+
+            .hero h1{
+                font-size:32px;
+            }
+
+            .content{
+                padding:20px;
+            }
+
+            iframe{
+                height:350px;
+            }
+
+            .nav-container{
+                flex-direction:column;
+            }
+
+            .card-top{
+                flex-direction:column;
+                align-items:flex-start;
+                gap:12px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+
+        <div class="hero">
+
+            <h1>Student XML Portal</h1>
+
+            <p>
+                View and manage student XML records using a clean
+                and modern interface.
+            </p>
+
+        </div>
+
+        <!-- CONTENT -->
+
+        <div class="content">
+
+            <div class="card">
+
+                <div class="card-top">
+
+                    <h2>XML File Viewer</h2>
+
+                    <div class="badge">
+                        Active
+                    </div>
+
+                </div>
+
+                <!-- XML FILE -->
+
+                <iframe src="student.xml"></iframe>
+
+            </div>
+
+            <!-- NAVIGATION -->
+
+            <div class="nav-container">
+
+                <a href="../experiment10.html"
+                   class="nav-btn prev-btn">
+
+                    ⬅ Previous Assignment
+
+                </a>
+
+                <a href="../assignment12/studentoutput.html"
+                   class="nav-btn next-btn">
+
+                    Next Assignment ➜
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

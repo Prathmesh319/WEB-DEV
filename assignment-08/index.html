@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced List Tags in HTML</title>
+    <style>
+        ul.custom-disc { list-style-type: disc; }
+        ul.custom-circle { list-style-type: circle; }
+        ul.custom-square { list-style-type: square; }
+        ol.upper-roman { list-style-type: upper-roman; }
+        ol.lower-alpha { list-style-type: lower-alpha; }
+        ul.no-bullet { list-style-type: none; padding-left: 0; }
+    </style>
+</head>
+<body>
+
+<h1>Advanced HTML List Tags</h1>
+
+<section>
+<h2>1. Definition List (dl, dt, dd)</h2>
+<dl>
+    <dt><strong>HTML</strong></dt>
+    <dd>HyperText Markup Language — the standard markup language for web pages.</dd>
+
+    <dt><strong>CSS</strong></dt>
+    <dd>Cascading Style Sheets — used for styling and layout of web pages.</dd>
+
+    <dt><strong>JavaScript</strong></dt>
+    <dd>A programming language that enables interactive web pages.</dd>
+
+    <dt><strong>XML</strong></dt>
+    <dd>Extensible Markup Language — designed to store and transport data.</dd>
+</dl>
+</section>
+
+<section>
+<h2>2. Nested Ordered and Unordered Lists</h2>
+<ol>
+    <li>Web Development
+        <ul>
+            <li>Frontend
+                <ol type="a">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ol>
+            </li>
+            <li>Backend
+                <ol type="a">
+                    <li>Node.js</li>
+                    <li>Python</li>
+                    <li>PHP</li>
+                </ol>
+            </li>
+        </ul>
+    </li>
+    <li>Database Management
+        <ul>
+            <li>SQL Databases
+                <ol type="i">
+                    <li>MySQL</li>
+                    <li>PostgreSQL</li>
+                </ol>
+            </li>
+            <li>NoSQL Databases
+                <ol type="i">
+                    <li>MongoDB</li>
+                    <li>Firebase</li>
+                </ol>
+            </li>
+        </ul>
+    </li>
+</ol>
+</section>
+
+<section>
+<h2>3. Styled Lists with CSS</h2>
+
+<h3>Disc Bullets:</h3>
+<ul class="custom-disc">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Cherry</li>
+</ul>
+
+<h3>Circle Bullets:</h3>
+<ul class="custom-circle">
+    <li>Dog</li>
+    <li>Cat</li>
+    <li>Bird</li>
+</ul>
+
+<h3>Square Bullets:</h3>
+<ul class="custom-square">
+    <li>Red</li>
+    <li>Green</li>
+    <li>Blue</li>
+</ul>
+
+<h3>Upper Roman Numerals:</h3>
+<ol class="upper-roman">
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+</ol>
+
+<h3>Lower Alphabetical:</h3>
+<ol class="lower-alpha">
+    <li>Alpha</li>
+    <li>Beta</li>
+    <li>Gamma</li>
+</ol>
+
+<h3>No Bullets:</h3>
+<ul class="no-bullet">
+    <li>✔ Task Completed</li>
+    <li>✔ Project Submitted</li>
+    <li>✖ Pending Review</li>
+</ul>
+</section>
+
+<section>
+<h2>4. Ordered List with Start and Reversed</h2>
+
+<h3>Starting from 5:</h3>
+<ol start="5">
+    <li>Fifth Item</li>
+    <li>Sixth Item</li>
+    <li>Seventh Item</li>
+</ol>
+
+<h3>Reversed List:</h3>
+<ol reversed>
+    <li>Third Place</li>
+    <li>Second Place</li>
+    <li>First Place</li>
+</ol>
+</section>
+
+</body>
+</html>

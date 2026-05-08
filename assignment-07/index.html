@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Tags in HTML</title>
+</head>
+<body>
+
+<h1>HTML Link Tags</h1>
+
+<nav>
+    <h2>Navigation Menu</h2>
+    <a href="#section1">Section 1: External Links</a> |
+    <a href="#section2">Section 2: Internal Links</a> |
+    <a href="#section3">Section 3: Email & Phone Links</a> |
+    <a href="#section4">Section 4: Link Attributes</a> |
+    <a href="#section5">Section 5: Image Links</a>
+</nav>
+
+<hr>
+
+<section id="section1">
+<h2>1. External Links</h2>
+<ul>
+    <li><a href="https://www.google.com" target="_blank">Google (opens in new tab)</a></li>
+    <li><a href="https://www.github.com" target="_blank">GitHub (opens in new tab)</a></li>
+    <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
+    <li><a href="https://www.wikipedia.org">Wikipedia (same tab)</a></li>
+</ul>
+</section>
+
+<section id="section2">
+<h2>2. Internal Links (Anchor Links)</h2>
+<p>These links jump to different sections on this same page:</p>
+<ul>
+    <li><a href="#section1">Go to External Links</a></li>
+    <li><a href="#section3">Go to Email & Phone Links</a></li>
+    <li><a href="#section5">Go to Image Links</a></li>
+</ul>
+<p>Link to other assignment pages:</p>
+<ul>
+    <li><a href="../assignment-01/index.html">Assignment 1 - Web Basics</a></li>
+    <li><a href="../assignment-02/index.html">Assignment 2 - Static Pages</a></li>
+    <li><a href="../assignment-03/index.html">Assignment 3 - Text Formatting</a></li>
+</ul>
+</section>
+
+<section id="section3">
+<h2>3. Email and Phone Links</h2>
+<ul>
+    <li><a href="mailto:prathmeshchavan1224@gmail.com">Send Email to Prathmesh Nalawade</a></li>
+    <li><a href="mailto:prathmeshchavan1224@gmail.com?subject=Hello&body=Hi Prathmesh,">Send Email with Subject</a></li>
+    <li><a href="tel:+911234567890">Call: +91 123 456 7890</a></li>
+</ul>
+</section>
+
+<section id="section4">
+<h2>4. Link Attributes</h2>
+<ul>
+    <li><a href="https://www.google.com" target="_blank" title="Visit Google">Link with Title (hover to see)</a></li>
+    <li><a href="https://www.google.com" target="_self">target="_self" (same window)</a></li>
+    <li><a href="https://www.google.com" target="_blank">target="_blank" (new tab)</a></li>
+    <li><a href="sample.pdf" download>Download Link (download attribute)</a></li>
+    <li><a href="https://www.google.com" rel="noopener noreferrer" target="_blank">Link with rel="noopener noreferrer"</a></li>
+</ul>
+</section>
+
+<section id="section5">
+<h2>5. Image as a Link</h2>
+<a href="https://www.google.com" target="_blank">
+    <img src="https://via.placeholder.com/200x80/4285F4/FFFFFF?text=Google" alt="Google Logo" width="200" height="80">
+</a>
+<p>Click the image above to visit Google.</p>
+</section>
+
+<hr>
+<p><a href="#top">⬆ Back to Top</a></p>
+
+</body>
+</html>
